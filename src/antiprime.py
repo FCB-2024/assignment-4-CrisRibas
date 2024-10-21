@@ -9,27 +9,31 @@ def main(x) :
 	## IDENTATION AS THIS COMMENT
 	i = 1
 	sumx = 0
-	sumy= 0
 	y = int(x) - 1
+	sumy = 0
 
 	while (i<= int(x)):
 		if (int(x) % i == 0):
 			sumx = sumx + 1
-	i = i + 1
+		i = i + 1
 
 	while (y >= 1):
 		i = 1
 		while (i <= y):
 			if (y % i == 0):
 				sumy = sumy + 1
-		i = i + 1
-		if (sumx <= sumy):
-			return ("not anti-prime")
+			i = i + 1
+		if (sumy >= sumx):
+
+			return ('not anti-prime')
 			y = 0
+		else:
+			y = y - 1
+			sumy = 0
 
 	if (sumx > sumy):
-		return ("anti-prime")
-    
+		return ('anti-prime')
+
 	## THE LAST LINES OF YOUR CODE SHOULD EITHER
 	## RETURN THE VALUE "anti-prime" or "not anti-prime"
 	## REPLACE THE FOLLOWING LINE BY WHATEVER LINES
@@ -48,5 +52,5 @@ if __name__ == "__main__" :
 	## $ python antiprime.py 6
 	## WHERE THE FIRST ARGUMENT IS A POSITIVE INTEGER NUMBER FOR WHICH
 	## YOU WANT TO FIGURE OUT WHETHER IS ANTI-PRIME OR NOT
-	print(main(x))
+	print (main(x))
 
